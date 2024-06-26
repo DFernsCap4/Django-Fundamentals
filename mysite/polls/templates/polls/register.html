@@ -1,0 +1,10 @@
+<form action="{% url 'polls:register' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="username" id="username" />
+    <label for="username" >Username </label><br>
+    <input type="email" name="email" id="email" />
+    <label for="emal" >email </label><br>
+    <input type="password" name="password" id="password" />
+    <label for="password" >password </label><br>
+    <input type="submit" value="register">
+</form>

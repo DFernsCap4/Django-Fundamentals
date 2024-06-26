@@ -1,0 +1,9 @@
+<form action="{% url 'polls:authenticateUser' %}" method="post">
+    {% csrf_token %}
+    {% if error_message %} <p><strong> {{error_message}} </strong></p> {% endif %}
+    <input type="text" name="username" id="username" />
+    <label for="username" >Username </label><br>
+    <input type="password" name="password" id="password" />
+    <label for="password" >password </label><br>
+    <input type="submit" value="login">
+</form>
