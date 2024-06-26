@@ -21,5 +21,5 @@ class QuestionModelTests(TestCase):
     def test_was_published_recently_with_old_question(self):
         #was_published_recently() return True for quesiton whose pub_date is beyond the last day
         time = timezone.now() - datetime.timedelta(hours=24)
-        recent_question = Question(pub_date=time)
-        self.assertIs(recent_question.was_published_recently(), False)
+        old_question = Question(pub_date=time)
+        self.assertIs(old_question.was_published_recently(), False)
